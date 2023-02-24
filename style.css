@@ -1,0 +1,208 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr 5fr;
+}
+
+.sidebar > .top,
+.sidebar > .middle,
+.sidebar > .bottom {
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    gap: 15px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    align-items: center;
+}
+
+.sidebar > .top,
+.sidebar > .middle {
+    margin-bottom: 25px;
+}
+
+.sidebar,
+.main {
+    outline: 1px solid black;
+    height: 100vh;
+}
+
+
+.sidebar > div > img {
+    height: 20px;
+    justify-self: center;
+}
+
+.sidebar > .top {
+    font-size: 30px;
+}
+
+.sidebar > .middle,
+.sidebar > .bottom {
+    font-size: 24px;
+}
+
+
+
+.main {
+    display: grid;
+    grid-template-rows: auto auto auto;
+}
+
+.search,
+.bell {
+    height: 30px;
+}
+
+.profile-picture {
+    height: 50px;
+}
+
+.main > .top {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    align-items: start;
+    margin-top: 20px;
+}
+
+#search {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    margin-right: 50px;
+    margin-left: 50px;
+}
+
+.search {
+    margin-right: 20px;
+}
+
+.main > .top > .top-right {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    align-items: center;
+    justify-content: end;
+    gap: 50px;
+    margin-left: 50px;
+    margin-right: 50px;
+
+}
+
+.main > .middle {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+}
+
+.middle-left {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    grid-template-rows: 1fr 1fr;
+
+    margin-left: 50px;
+}
+
+.profile-picture-big {
+    grid-row: 1 / 3;
+    height: 80px;
+    margin-right: 25px;
+}
+
+.greeting {
+    align-self: center;
+    font-weight: 600;
+}
+
+.handle {
+     font-size: 28px;
+     font-weight: 600;
+}
+
+.middle-right {
+    align-self: center;
+    justify-self: end;
+    margin-right: 50px;
+}
+
+.middle-right > button {
+    margin-left: 50px;
+}
+
+.bottom {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    margin-right: 25px;
+}
+
+.bottom > .left {
+    display: grid;
+    grid-template-rows: auto 1fr;
+    grid-row: 1/3;
+    margin-right: 25px;
+    margin-left: 25px;
+}
+
+
+.bottom > .left > .content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 50px;
+}
+
+.bottom > .left > .content > .card {
+    display: grid;
+    grid-template-rows: auto auto 1fr;
+    padding: 20px;
+    border: 1px solid black;
+}
+
+.card > .img-container {
+    justify-self: end;
+    align-self: end;
+}
+
+.card > .img-container > img {
+    height: 25px;
+    margin: 10px;
+}
+
+.bottom > .top-right {
+    display: grid;
+    grid-template-rows: auto 1fr;
+}
+
+.bottom >.top-right >.content {
+    display: grid;
+    padding: 20px;
+    font-size: 14px;
+    border: 1px solid black;
+}
+
+.bottom > .bottom-right {
+    align-self: end;
+}
+
+.bottom > .bottom-right > .content {
+    display: grid;
+    grid-template-rows: repeat(4,1fr);
+    border: 1px solid black;
+
+}
+
+.bottom > .bottom-right > .content > .container {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    grid-template-rows: 1fr 1fr;
+    margin: 10px;
+}
+
+.bottom > .bottom-right > .content > .container > img {
+    grid-row: span 2;
+    height: 40px;
+    margin-right: 10px;
+}
