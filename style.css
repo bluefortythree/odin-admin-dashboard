@@ -8,6 +8,10 @@ body {
     grid-template-columns: 1fr 5fr;
 }
 
+.sidebar {
+    background-color: blueviolet;
+}
+
 .sidebar > .top,
 .sidebar > .middle,
 .sidebar > .bottom {
@@ -17,6 +21,7 @@ body {
     padding-top: 20px;
     padding-bottom: 20px;
     align-items: center;
+    color: white;
 }
 
 .sidebar > .top,
@@ -26,7 +31,6 @@ body {
 
 .sidebar,
 .main {
-    outline: 1px solid black;
     height: 100vh;
 }
 
@@ -34,15 +38,23 @@ body {
 .sidebar > div > img {
     height: 20px;
     justify-self: center;
+    filter: invert(100%) sepia(0%) saturate(7500%) hue-rotate(332deg) brightness(105%) contrast(105%);
+
 }
 
 .sidebar > .top {
     font-size: 30px;
+    font-weight: 600;
+}
+
+.sidebar > .top > img {
+    height: 40px;
 }
 
 .sidebar > .middle,
 .sidebar > .bottom {
     font-size: 24px;
+    font-weight: 600;
 }
 
 
@@ -59,6 +71,15 @@ body {
 
 .profile-picture {
     height: 50px;
+    background-color: red;
+    border-radius: 50%;
+    padding: 5px;
+    
+}
+
+.username {
+    font-weight: 600;
+    font-size: 24px;
 }
 
 .main > .top {
@@ -98,24 +119,25 @@ body {
 .middle-left {
     display: grid;
     grid-template-columns: auto 1fr;
-    grid-template-rows: 1fr 1fr;
+    grid-template-rows: 1fr 2fr;
 
     margin-left: 50px;
 }
 
 .profile-picture-big {
     grid-row: 1 / 3;
-    height: 80px;
+    height: 120px;
     margin-right: 25px;
 }
 
 .greeting {
     align-self: center;
     font-weight: 600;
+    font-size: 18px;
 }
 
 .handle {
-     font-size: 28px;
+     font-size: 30px;
      font-weight: 600;
 }
 
@@ -126,19 +148,29 @@ body {
 }
 
 .middle-right > button {
-    margin-left: 50px;
+    margin-left: 35px;
+    background-color: blueviolet;
+    color: white;
+    width: 100px;
+    border-radius: 20px;
+    padding: 11px 16px 11px 16px;
+    font-size: 16px;
+    font-weight: 600;
+    border: none;
+    
 }
 
-.bottom {
+.main > .bottom {
     display: grid;
+    background-color: #D3D3D3;
     grid-template-columns: 3fr 1fr;
     grid-template-rows: 1fr 1fr;
-    margin-top: 50px;
-    margin-bottom: 50px;
-    margin-right: 25px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    padding-right: 25px;
 }
 
-.bottom > .left {
+.main > .bottom > .left {
     display: grid;
     grid-template-rows: auto 1fr;
     grid-row: 1/3;
@@ -156,14 +188,33 @@ body {
 
 .bottom > .left > .content > .card {
     display: grid;
+    grid-template-columns: 1fr 49fr;
     grid-template-rows: auto auto 1fr;
-    padding: 20px;
-    border: 1px solid black;
+    box-shadow: 1px 1px 1px 1px gray;
+    background: #FAF9F6;
 }
 
+.card-title {
+    font-weight: 600;
+    font-size: 20px;
+    margin-left: 20px;
+    margin-top: 20px;
+}
+
+.card-title + div {
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.stripe {
+    grid-row: 1 / -1;
+    background-color: orange;
+}
 .card > .img-container {
     justify-self: end;
     align-self: end;
+    margin-right: 20px;
+    margin-bottom: 20px;
 }
 
 .card > .img-container > img {
@@ -178,9 +229,27 @@ body {
 
 .bottom >.top-right >.content {
     display: grid;
-    padding: 20px;
+    padding-right: 20px;
+    padding-left: 20px;
     font-size: 14px;
-    border: 1px solid black;
+    box-shadow: 1px 1px 1px 1px gray;
+    align-content: center;
+    background-color: white;
+}
+
+#site-maintenance,
+#community-share-day,
+#updated-privacy-policy {
+    font-size: 16px;
+}
+
+.description {
+    border-bottom: 1px solid black;
+    padding-bottom: 10px;
+}
+
+.headline {
+    padding-top: 10px;
 }
 
 .bottom > .bottom-right {
@@ -190,7 +259,8 @@ body {
 .bottom > .bottom-right > .content {
     display: grid;
     grid-template-rows: repeat(4,1fr);
-    border: 1px solid black;
+    box-shadow: 1px 1px 1px 1px gray;
+    background-color: white;
 
 }
 
@@ -198,11 +268,17 @@ body {
     display: grid;
     grid-template-columns: auto 1fr;
     grid-template-rows: 1fr 1fr;
-    margin: 10px;
+    margin: 20px;
 }
 
 .bottom > .bottom-right > .content > .container > img {
     grid-row: span 2;
     height: 40px;
-    margin-right: 10px;
+    margin-right: 20px;
+}
+
+.title {
+    font-size: 26px;
+    font-weight: 600;
+    margin-bottom: 5px;
 }
